@@ -9,6 +9,11 @@ import { IonicPage, NavController, ViewController } from 'ionic-angular';
   templateUrl: 'item-create.html'
 })
 export class ItemCreatePage {
+  public event = {
+    month: '1990-02-19',
+    timeStarts: '07:43',
+    timeEnds: '1990-02-20'
+  }
   @ViewChild('fileInput') fileInput;
 
   isReadyToSave: boolean;
@@ -19,9 +24,11 @@ export class ItemCreatePage {
 
   constructor(public navCtrl: NavController, public viewCtrl: ViewController, formBuilder: FormBuilder, public camera: Camera) {
     this.form = formBuilder.group({
-      profilePic: [''],
-      name: ['', Validators.required],
-      about: ['']
+      // profilePic: [''],
+      titleplan: ['', Validators.required],
+      budget: ['', Validators.required],
+      participant: ['', Validators.required],
+      noplan: ['', Validators.required],
     });
 
     // Watch the form for changes, and

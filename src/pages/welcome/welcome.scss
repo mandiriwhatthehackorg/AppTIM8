@@ -18,7 +18,36 @@ page-welcome {
     position: relative;
     z-index: 2;
     margin-top: -64px;
-    text-align: center;
+    text-align: left;
+  }
+  .cardtitle {
+    margin-left: 24%;
+    font-size: 2rem;
+    padding: 1%;
+  }
+  .parag {
+    margin-left: 25%;
+    max-width: 50%;
+  }
+  .card .note-md {
+    font-size: 1.1rem;
+}
+.btnrej {
+  margin-right: 15%;
+    margin-left: 5%;
+    color: #333;
+}
+  .ion-note {
+    margin-left: 25%;
+    max-width: 50%;
+  }
+  .imgs {
+    max-width: 100%;
+    width: 20%;
+    max-height: 25%;
+    left: 10%;
+    top: 22%;
+    position: absolute;
   }
   .splash-logo {
     margin: auto;

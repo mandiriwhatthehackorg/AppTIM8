@@ -1,8 +1,8 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'ITEM_CREATE_TITLE' | translate }}</ion-title>
-    <ion-buttons start>
+    <ion-title>Add New Plan</ion-title>
+    <!-- <ion-buttons start>
       <button ion-button (click)="cancel()">
         <span color="primary" showWhen="ios">
           {{ 'CANCEL_BUTTON' | translate }}
@@ -17,16 +17,19 @@
         </span>
         <ion-icon name="md-checkmark" showWhen="core,android,windows"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
+    <div class="titles">
+        <h1>PLAN INFORMATION</h1>
+      </div>
   <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
     <input type="file" #fileInput style="visibility: hidden; height: 0px" name="files[]" (change)="processWebImage($event)" />
-    <div class="profile-image-wrapper" (click)="getPicture()">
+    <!-- <div class="profile-image-wrapper" (click)="getPicture()">
       <div class="profile-image-placeholder" *ngIf="!this.form.controls.profilePic.value">
         <ion-icon name="add"></ion-icon>
         <div>
@@ -34,13 +37,23 @@
         </div>
       </div>
       <div class="profile-image" [style.backgroundImage]="getProfileImageStyle()" *ngIf="this.form.controls.profilePic.value"></div>
-    </div>
+    </div> -->
     <ion-list>
       <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_NAME_PLACEHOLDER' | translate }}" formControlName="name"></ion-input>
+        <ion-input type="text" placeholder="Title Plan" formControlName="titleplan"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_ABOUT_PLACEHOLDER' | translate }}" formControlName="about"></ion-input>
+        <ion-input type="text" placeholder="Budget @Person" formControlName="budget"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ends</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Add Participant" formControlName="participant"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="No Participant" formControlName="nopart"></ion-input>
       </ion-item>
     </ion-list>
   </form>

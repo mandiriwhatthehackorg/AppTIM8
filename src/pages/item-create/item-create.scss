@@ -1,8 +1,38 @@
 page-item-create {
+  .titles h1 {
+    color: royalblue;
+    padding-left: 10%;
+    font-size: 2rem;
+  }
+
+  $black-overlay: url('../assets/img/background_header.png') no-repeat transparent;;
+     $text-color: #666;
+     $banner-text-color: white;
+     $content-color: whitesmoke;
+     $detail-background: rgba(236,236,236,.8);
+
+    /* Header */
+    .toolbar-background {
+        border-color: transparent;
+        background: $black-overlay;
+        margin-top: -1%;
+        padding-bottom: 30%;
+    }
+    .toolbar-title-md {
+      color: white;
+    }
+    .ion-button {
+      color: white;
+    }
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+      color: white;
+      background-color: transparent;
+  }
   .profile-image-wrapper {
     text-align: center;
     margin: 20px 0;
 
+  
     .profile-image {
       width: 96px;
       height: 96px;

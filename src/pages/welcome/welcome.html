@@ -11,9 +11,28 @@
         <div>
             <ion-card>
               <ion-card-content>
-                  <p>Hi Astrid! You are a good planner
-                      Let's go make your dream come true by finishing 2 remaining plan
-                    </p>
+                  <ion-row>
+                      
+                      <ion-col>
+                          <ion-note text-left>
+                          Serving
+                            </ion-note>
+                        <button ion-button icon-start clear small>
+                          <div>Rp200.000.000</div>
+                        </button>
+                      </ion-col>
+                      <ion-col>
+                          <ion-note>
+                          Outcame Estimation
+                            </ion-note>
+                        <button ion-button icon-start clear small>
+                          <div>Rp50.000.000</div>
+                        </button>
+                      </ion-col>
+                      <p>
+                          Monthly Activity:
+                      </p>
+                    </ion-row>
                 </ion-card-content>
           </ion-card>
         </div>
@@ -25,6 +44,58 @@
   </div>
 
   <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+              <ion-card>
+                  <ion-card-content>
+                      <div class="imgs"><img src="/assets/img/ian-avatar.png"/></div>
+                      <p class="parag">
+                          Najla is inviting you to a plan
+                        </p>
+                    <ion-card-title class="cardtitle">
+                      Dieng Culture Festival
+                      </ion-card-title>
+                      <ion-note class="ion-note">
+                      Rp3.000.000/person + 30 October 2019
+                      </ion-note>
+                  </ion-card-content>
+                  <button class="btnrej" ion-button round color="light" outline icon-start (click)="addItem()">Reject</button>
+                  <button ion-button round (click)="addItem()" icon-end>Accept</button>
+                </ion-card>
+      </button>
+    </ion-item-sliding>
+    <ion-card>
+        <ion-card-content>
+            <div class="imgs"><img src="/assets/img/ian-avatar.png"/></div>
+            <p class="parag">
+                Najla is inviting you to a plan
+              </p>
+          <ion-card-title class="cardtitle">
+            Dieng Culture Festival
+            </ion-card-title>
+            <ion-note class="ion-note">
+            Rp3.000.000/person + 30 October 2019
+            </ion-note>
+            <ion-list>
+              <ion-item>
+                  <ion-note>
+                      Astrid Rp3.000.000/person + 30 October 2019
+                      <br>
+                      Mushlihun Rp3.000.000/person + 30 October 2019
+                      <br>
+                      Najla Rp3.000.000/person + 30 October 2019
+                  </ion-note>
+                  <ion-card-content>
+                      <canvas #pieCanvas></canvas>
+                    </ion-card-content>
+              </ion-item>
+            </ion-list>
+        </ion-card-content>
+        <button class="btnrej" ion-button round color="light" outline icon-start (click)="addItem()">Reject</button>
+        <button ion-button round (click)="addItem()" icon-end>Accept</button>
+      </ion-card>
+  </ion-list>
+  <!-- <ion-list>
       <ion-item-sliding *ngFor="let item of currentItems">
         <button ion-item (click)="openItem(item)">
           <ion-avatar item-start>
@@ -41,5 +112,5 @@
           </button>
         </ion-item-options>
       </ion-item-sliding>
-    </ion-list>
+    </ion-list> -->
 </ion-content>
